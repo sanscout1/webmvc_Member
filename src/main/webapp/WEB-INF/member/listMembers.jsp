@@ -14,7 +14,7 @@
         <th>비밀번호</th>
         <th>이름</th>
         <th>이메일</th>
-        <th>기입일</th>
+        <th>가입일</th>
         <th>수정</th>
         <th>삭제</th>
     </tr>
@@ -39,3 +39,65 @@
 <span><a href="/member/addMember.do">회원 가입하기</a></span>
 </body>
 </html>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+
+    th {
+        background-color: mediumpurple;
+        color: white;
+        padding: 15px;
+    }
+
+
+    td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: mediumpurple;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+    }
+    span a {
+        /* inline 처럼 글자 만큼 사이즈 차지하지만 block 특성도 가진다*/
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: mediumpurple;
+        color: white;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    span a:hover {
+        background-color: rebeccapurple;
+    }
+
+</style>
