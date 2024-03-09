@@ -89,4 +89,24 @@ public class MemberDAO {
         preparedStatement.setString(1,id);
         preparedStatement.executeUpdate();
     }
+
+    public MemberVO login(String id,String password) throws Exception{
+        String query = "select * from mvc_member where id =? and password= ?";
+        MemberVO memberVO = null;
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement=connection.prepareStatement(query);
+        preparedStatement.setString(1, id);
+        preparedStatement.setString(2, password);
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        memberVO = MemberVO.builder()
+                .id(resultSet.getString(1))
+                .password(resultSet.getString(2))
+                .name(resultSet.getString(3))
+                .email(resultSet.getString(4))
+                .regdate(resultSet.getDate(5).toLocalDate())
+                .build();
+        return memberVO;
+    }
+
 }

@@ -44,4 +44,9 @@ public enum MemberService {
     public void delMember(String id) throws Exception {
         memberDAO.deleteOne(id);
     }
+    public MemberDTO login(String id, String pw)throws Exception {
+        MemberVO vo = memberDAO.login(id, pw);
+        MemberDTO memberDTO = modelMapper.map(vo, MemberDTO.class);
+        return memberDTO;
+    }
 }
