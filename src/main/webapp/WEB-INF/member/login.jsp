@@ -19,8 +19,8 @@
     <label>아이디
     <input type="text" name="id">
     </label>
-    <label>비밀번호
-    <input type="text" name="pw">
+    <label>비밀번호<br>
+    <input type="password" name="pw">
     </label>
     <button type="submit">LOGIN</button>
 </form>
@@ -51,7 +51,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    input[type=text] {
+    input[type=text], input[type=password] {
         width: 100%;
         margin-bottom: 10px;
         padding: 8px;

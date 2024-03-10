@@ -10,6 +10,7 @@
         <label>아이디 :
             <span id="id">${dto.id}</span>
             <input type="hidden"  name="id" value="${dto.id}">
+<%--            <input type="hidden"  name="id" value="${dto.id}" readonly>--%>
         </label>
     </div>
     <div>
@@ -28,8 +29,8 @@
         </label>
     </div>
     <div>
-        <label>가입일
-            <input type="text" name="regdate" value="${dto.regdate}">
+        <label>가입일<br>
+            <input type="date" name="regdate" value="${dto.regdate}">
         </label>
     </div>
 
@@ -79,6 +80,9 @@
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 4px;
+    }
+    input[type=date]{
+        margin-top: 10px;
     }
 
     button {
